@@ -195,6 +195,7 @@
     <Content Include="ctrls\Admin\AdminTabs.ascx" />
     <Content Include="ctrls\Admin\Courses.ascx" />
     <Content Include="ctrls\Admin\Degree.ascx" />
+    <Content Include="ctrls\Home\MainPage.ascx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Images\AADegree.jpg" />
     <Content Include="Images\ASDegree.jpg" />
@@ -410,6 +411,13 @@
     </Compile>
     <Compile Include="ctrls\Admin\Degree.ascx.designer.cs">
       <DependentUpon>Degree.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\Home\MainPage.ascx.cs">
+      <DependentUpon>MainPage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ctrls\Home\MainPage.ascx.designer.cs">
+      <DependentUpon>MainPage.ascx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

@@ -7,18 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MajorAdviser {
+namespace MajorAdviser.ctrls.Home {
     
     
-    public partial class _Default {
+    public partial class MainPage {
         
         /// <summary>
-        /// MainPage control.
+        /// ddl_majors control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::MajorAdviser.ctrls.Home.MainPage MainPage;
+        protected global::System.Web.UI.WebControls.DropDownList ddl_majors;
+        
+        /// <summary>
+        /// Panel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel Panel1;
     }
 }

@@ -1,5 +1,8 @@
 ﻿<%@ Page Title="Major Adviser" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="MajorAdviser._Default" %>
 
+<%@ Register Src="~/ctrls/Home/MainPage.ascx" TagPrefix="uc1" TagName="MainPage" %>
+
+
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
@@ -10,7 +13,7 @@
             Right now we only have a <a href="~/Plan.aspx" runat="server">Plan</a> to work on.
         </p>
     </div>
-
+    <uc1:MainPage runat="server" id="MainPage" />
     <%--    <div class="row">
         <div class="col-md-4">
             <h2>Getting started</h2>
