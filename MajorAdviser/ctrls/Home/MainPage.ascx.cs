@@ -39,7 +39,8 @@ namespace MajorAdviser.ctrls.Home
                     .ConnectionStrings["DefaultConnection"].ConnectionString;
                 con.Open();
                 cmd.Connection = con;
-                cmd.CommandText = "SELECT * FROM dbo.Major order by Title asc";
+                                  // Filter Query to include Computer Science Major's only
+                cmd.CommandText = "SELECT * FROM dbo.Major WHERE Code LIKE '0%' AND Code NOT LIKE '0100' OR Code LIKE '2%' ORDER BY Title ASC";
                 cmd.CommandType = CommandType.Text;
                 SqlDataAdapter mySqlDataAdapter = new SqlDataAdapter(cmd);
                 mySqlDataAdapter.Fill(myDataSet);
