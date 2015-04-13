@@ -394,14 +394,14 @@ VALUES
 		('ETS4502','Metrology and Instrumentation','An introduction to the basic concepts and terminology of metrology and instrumentation. Theory, procedures and techniques essential to industrial measurement and laboratory practice are covered. (Prerequisites: ETG 3541 or equivalent; EET 3085 or equivalent; and MAC 2253 or equivalent.)',2.00,258),
 		('ETS4502L','Metrology and Instrumentation Lab','Lab Component for; An introduction to the basic concepts and terminology of metrology and instrumentation. Theory, procedures and techniques essential to industrial measurement and laboratory practice are covered. (Prerequisites: ETG 3541 or equivalent; EET 3085 or equivalent; and MAC 2253 or equivalent.)',1.00,257),
 		/* MAP - Mathematics (Applied) */
-		('MAP3401','Problem Analysis','Application of Calculus in Solving Engineering Technology Problems.',3.00,NULL);
+		('MAP3401','Problem Analysis','Application of Calculus in Solving Engineering Technology Problems.',3.00,NULL),
 		/***** Additional Courses needed to fulfill Major degree requirements *****/
 		('PHY1054','General Physics II','Second half of PHY1053/1054. Continuation of PHY1053. Course covers sound, wave motion, electrostatics, magnetism and physical and geometrical optics.',3.00,261),
 		('PHY1054L','General Physics II Lab','Lab component for; Second half of PHY1053/1054. Continuation of PHY1053. Course covers sound, wave motion, electrostatics, magnetism and physical and geometrical optics.',1.00,260),	
 		('ETD2357','Inventor Solid Modeling','Beginning course in 3D modeling using AutoDesk INVENTOR software. Topics include generation of engineering drawings and animated presentations from part and assembly models. Course work intended to prepare students for the INVENTOR User Certification Test.',2.00,263),
 		('ETC2357L','Inventor Solid Modeling Lab','Lab Component for; Beginning course in 3D modeling using AutoDesk INVENTOR software. Topics include generation of engineering drawings and animated presentations from part and assembly models. Course work intended to prepare students for the INVENTOR User Certification Test.',1.00,262),	
 		('ETD2377','3D Computer Animation (3D Studio)','An introductory course in 3D animation for technical graphics that includes object creation, editing, lighting, materials, keyframing and rendering.',2.00,265),
-		('ETC2377L','3D Computer Animation (3D Studio) Lab','Lab Component for; An introductory course in 3D animation for technical graphics that includes object creation, editing, lighting, materials, keyframing and rendering.',1.00,264),
+		('ETC2377L','3D Computer Animation (3D Studio) Lab','Lab Component for; An introductory course in 3D animation for technical graphics that includes object creation, editing, lighting, materials, keyframing and rendering.',1.00,264);
 		
 INSERT INTO Degree (Code, Title)
 VALUES ('AS','Associates of Science Degree'),
