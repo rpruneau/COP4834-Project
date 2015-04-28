@@ -210,6 +210,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
+    <Content Include="Admin\Web.config" />
     <None Include="Properties\PublishProfiles\MajorAdviser.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Plan.aspx" />
@@ -429,6 +430,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="GridViewHelper\GridViewGroup.cs" />
+    <Compile Include="GridViewHelper\GridViewGroupList.cs" />
+    <Compile Include="GridViewHelper\GridViewHelper.cs" />
+    <Compile Include="GridViewHelper\GridViewSummary.cs" />
+    <Compile Include="GridViewHelper\GridViewSummaryList.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Plan.aspx.cs">
       <DependentUpon>Plan.aspx</DependentUpon>
@@ -438,6 +444,7 @@
       <DependentUpon>Plan.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Roles\RoleActions.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
