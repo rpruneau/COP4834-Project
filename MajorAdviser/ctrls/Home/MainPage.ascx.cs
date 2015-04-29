@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -21,6 +22,7 @@ namespace MajorAdviser.ctrls.Home
                 ddlMajors.DataTextField = "Title";
                 ddlMajors.DataValueField = "ID";
                 ddlMajors.DataBind();
+                ddlMajors.Items.Insert(0,new ListItem("Please select a major..."));
             }
         }
 
@@ -65,6 +67,20 @@ namespace MajorAdviser.ctrls.Home
             Panel1.Visible = true;
             gvCourses.DataSource = GetCourse(ddlMajors.SelectedIndex);
             gvCourses.DataBind();
+
+            GridViewHelper gridViewHelper = new GridViewHelper(this.gvCourses, false, SortDirection.Ascending);
+            gridViewHelper.RegisterGroup("Title2", true, true);
+            gridViewHelper.GroupHeader += new GroupEvent(gridViewHelper_GroupHeader);
+            gridViewHelper.ApplyGroupSort();
+        }
+
+        private void gridViewHelper_GroupHeader(string groupName, object[] values, GridViewRow row)
+        {
+            if(groupName == "Title2")
+            {
+                row.BackColor = Color.LightGray;
+                row.Cells[0].Text = "" + row.Cells[0].Text;
+            }
         }
 
         /// <summary>
@@ -100,6 +116,13 @@ namespace MajorAdviser.ctrls.Home
                 con.Close();
             }
             return myDataSet;
+        }
+        protected void gvCourses_Sorting(object sender, GridViewSortEventArgs e)
+        {
+            DataTable dataTable = GetCourse(ddlMajors.SelectedIndex).Tables[0];
+            dataTable.DefaultView.Sort = e.SortExpression;
+            gvCourses.DataSource = dataTable;
+            gvCourses.DataBind();
         }
     }
 }

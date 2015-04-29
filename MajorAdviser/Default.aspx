@@ -7,11 +7,11 @@
 
     <div class="jumbotron">
         <h1>Major Adviser</h1>
-        <p class="lead">Let's get to work</p>
+        <%--<p class="lead">Let's get to work</p>--%>
         <%--<p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>--%>
-        <p>
+        <%--<p>
             Right now we only have a <a href="~/Plan.aspx" runat="server">Plan</a> to work on.
-        </p>
+        </p>--%>
     </div>
     <uc1:MainPage runat="server" id="MainPage" />
     <%--    <div class="row">

@@ -193,8 +193,12 @@
     <Content Include="Content\majorAdviser.css" />
     <Content Include="Content\Site.css" />
     <Content Include="ctrls\Admin\AdminTabs.ascx" />
+    <Content Include="ctrls\Admin\Category.ascx" />
     <Content Include="ctrls\Admin\Courses.ascx" />
     <Content Include="ctrls\Admin\Degree.ascx" />
+    <Content Include="ctrls\Admin\Major.ascx" />
+    <Content Include="ctrls\Admin\MajorCategory.ascx" />
+    <Content Include="ctrls\Admin\MajorCategoryCourse.ascx" />
     <Content Include="ctrls\Home\MainPage.ascx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Images\AADegree.jpg" />
@@ -247,12 +251,14 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
+    <Content Include="Student\Default.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Site.Mobile.Master" />
+    <Content Include="Student\Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -399,6 +405,13 @@
     <Compile Include="ctrls\Admin\AdminTabs.ascx.designer.cs">
       <DependentUpon>AdminTabs.ascx</DependentUpon>
     </Compile>
+    <Compile Include="ctrls\Admin\Category.ascx.cs">
+      <DependentUpon>Category.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ctrls\Admin\Category.ascx.designer.cs">
+      <DependentUpon>Category.ascx</DependentUpon>
+    </Compile>
     <Compile Include="ctrls\Admin\Courses.ascx.cs">
       <DependentUpon>Courses.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -412,6 +425,27 @@
     </Compile>
     <Compile Include="ctrls\Admin\Degree.ascx.designer.cs">
       <DependentUpon>Degree.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\Admin\Major.ascx.cs">
+      <DependentUpon>Major.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ctrls\Admin\Major.ascx.designer.cs">
+      <DependentUpon>Major.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\Admin\MajorCategory.ascx.cs">
+      <DependentUpon>MajorCategory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ctrls\Admin\MajorCategory.ascx.designer.cs">
+      <DependentUpon>MajorCategory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ctrls\Admin\MajorCategoryCourse.ascx.cs">
+      <DependentUpon>MajorCategoryCourse.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ctrls\Admin\MajorCategoryCourse.ascx.designer.cs">
+      <DependentUpon>MajorCategoryCourse.ascx</DependentUpon>
     </Compile>
     <Compile Include="ctrls\Home\MainPage.ascx.cs">
       <DependentUpon>MainPage.ascx</DependentUpon>
@@ -460,6 +494,13 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="Student\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -470,6 +511,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="ctrls\Student\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

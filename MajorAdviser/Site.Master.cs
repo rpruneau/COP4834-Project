@@ -72,6 +72,10 @@ namespace MajorAdviser
             {
                 adminLink.Visible = true;
             }
+            if (HttpContext.Current.User.Identity.IsAuthenticated) 
+            {
+                studentLink.Visible = true;
+            }
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)

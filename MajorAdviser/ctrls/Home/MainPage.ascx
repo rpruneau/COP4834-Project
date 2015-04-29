@@ -3,11 +3,11 @@
 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
     <ContentTemplate>
         <asp:DropDownList ID="ddlMajors" runat="server" OnSelectedIndexChanged="DisplayResults" AutoPostBack="true"></asp:DropDownList>
+        <br /><br />
         <asp:Panel ID="Panel1" runat="server" Visible="False">
-            <p>Well eventually there will be interesting things here to display about this major</p>
-            <p>Stay tuned..</p>
-            <asp:GridView ID="gvCourses" runat="server" AutoGenerateColumns="False">
+            <asp:GridView ID="gvCourses" runat="server" AutoGenerateColumns="False" AllowSorting="True" OnSorting="gvCourses_Sorting">
                 <Columns>
+                    <asp:BoundField HeaderText="Category" DataField="Title2" />
                     <asp:BoundField HeaderText="Course" DataField="Code2" />
                     <asp:BoundField HeaderText="Title" DataField="Title3" />
                     <asp:BoundField HeaderText="Description" DataField="Description" />
