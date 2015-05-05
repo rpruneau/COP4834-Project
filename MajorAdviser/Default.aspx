@@ -45,3 +45,6 @@
         </div>
     </div>--%>
 </asp:Content>
+<asp:Content ID="PageEnd" ContentPlaceHolderID="PageEnd" runat="server">
+    <script src="<%= ResolveUrl("~/Scripts/ctrls/Home/Main.js") %>"></script>
+</asp:Content>

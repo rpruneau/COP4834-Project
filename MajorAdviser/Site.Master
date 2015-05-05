@@ -15,10 +15,13 @@
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link href="Content/majorAdviser.css" rel="stylesheet" />
+    <asp:PlaceHolder runat="server">
+        <link href="<%= ResolveUrl("~/Content/jAlert-v2-min.css") %>" rel="stylesheet" />
+    </asp:PlaceHolder>
 </head>
 <body>
     <form runat="server">
-        <ajax:ToolkitScriptManager runat="server">
+        <ajax:ToolkitScriptManager runat="server" EnablePageMethods="True">
             <Scripts>
                 <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
                 <%--Framework Scripts--%>
@@ -86,5 +89,9 @@
             </footer>
         </div>
     </form>
+    <script src="<%= ResolveUrl("~/Scripts/libs/jAlert-v2-min.js") %>"></script>
+    <asp:ContentPlaceHolder ID="PageEnd" runat="server">
+        
+    </asp:ContentPlaceHolder>
 </body>
 </html>

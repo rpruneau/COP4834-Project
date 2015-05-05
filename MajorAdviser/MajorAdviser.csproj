@@ -190,6 +190,7 @@
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\jAlert-v2-min.css" />
     <Content Include="Content\majorAdviser.css" />
     <Content Include="Content\Site.css" />
     <Content Include="ctrls\Admin\AdminTabs.ascx" />
@@ -220,8 +221,10 @@
     <Content Include="Plan.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\ctrls\Home\Main.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\libs\jAlert-v2-min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -454,6 +457,8 @@
     <Compile Include="ctrls\Home\MainPage.ascx.designer.cs">
       <DependentUpon>MainPage.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Data\Course.cs" />
+    <Compile Include="Data\Student.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -510,6 +515,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Api\" />
     <Folder Include="App_Data\" />
     <Folder Include="ctrls\Student\" />
   </ItemGroup>

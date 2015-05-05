@@ -4,4 +4,9 @@
     <div class="jumbotron">
         <h1>Student Page</h1>
     </div>
+
+    <h2>Completed Courses</h2>
+    <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+
+
 </asp:Content>

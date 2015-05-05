@@ -11,7 +11,9 @@ namespace MajorAdviser.Student
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            MajorAdviser.Data.Student student = new MajorAdviser.Data.Student(HttpContext.Current.User.Identity.Name);
+            GridView1.DataSource = student.GetMyClasses();
+            GridView1.DataBind();
         }
     }
 }
