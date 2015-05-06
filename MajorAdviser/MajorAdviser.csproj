@@ -457,7 +457,9 @@
     <Compile Include="ctrls\Home\MainPage.ascx.designer.cs">
       <DependentUpon>MainPage.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Data\Category.cs" />
     <Compile Include="Data\Course.cs" />
+    <Compile Include="Data\MajorCategory.cs" />
     <Compile Include="Data\Student.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

@@ -80,14 +80,21 @@ namespace MajorAdviser.ctrls.Home
             gridViewHelper.RegisterGroup("Title2", true, true);
             gridViewHelper.GroupHeader += new GroupEvent(gridViewHelper_GroupHeader);
             gridViewHelper.ApplyGroupSort();
+
+            //Hide gridview column for non users
+            if (!HttpContext.Current.User.Identity.IsAuthenticated)
+            {
+                gvCourses.Columns[5].Visible = false;
+            }
         }
 
         private void gridViewHelper_GroupHeader(string groupName, object[] values, GridViewRow row)
         {
+            MajorCategory majorCategory = new MajorCategory();
             if (groupName == "Title2")
             {
                 row.BackColor = Color.LightGray;
-                row.Cells[0].Text = "" + row.Cells[0].Text;
+                row.Cells[0].Text = "" + row.Cells[0].Text + " " + majorCategory.RequiredCredits(ddlMajors.SelectedIndex, row.Cells[0].Text) + " required credits";
             }
         }
 
@@ -159,16 +166,20 @@ namespace MajorAdviser.ctrls.Home
 
         protected void gvCourses_OnRowDataBound(Object sender, GridViewRowEventArgs e)
         {
-            //Make checkbox checked if student has class
-            //Get student id
-            MajorAdviser.Data.Student student = new MajorAdviser.Data.Student(HttpContext.Current.User.Identity.Name);
-            // If student has class mark checkbox and change class
-            if (e.Row.DataItem != null)
+            if (HttpContext.Current.User.Identity.IsAuthenticated)
             {
-                DataKey key = gvCourses.DataKeys[e.Row.DataItemIndex];
-                if(student.HasClass(key.Value.ToString()))
+                //Make checkbox checked if student has class
+                //Get student id
+                MajorAdviser.Data.Student student = new MajorAdviser.Data.Student(HttpContext.Current.User.Identity.Name);
+                // If student has class mark checkbox and change class
+                if (e.Row.DataItem != null)
                 {
-                    ((CheckBox)e.Row.FindControl("CheckBox1")).Checked = true;
+                    DataKey key = gvCourses.DataKeys[e.Row.DataItemIndex];
+                    if (student.HasClass(key.Value.ToString()))
+                    {
+                        ((CheckBox)e.Row.FindControl("CheckBox1")).Checked = true;
+                        e.Row.CssClass = "markComplete";
+                    }
                 }
             }
         }

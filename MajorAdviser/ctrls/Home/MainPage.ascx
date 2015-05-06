@@ -1,4 +1,9 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="MainPage.ascx.cs" Inherits="MajorAdviser.ctrls.Home.MainPage" %>
+<style>
+.markComplete{
+    background-color:#ff6a00;
+}
+</style>
 <h1>Select A Major</h1>
 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
     <ContentTemplate>
